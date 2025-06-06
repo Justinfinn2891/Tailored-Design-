@@ -1,3 +1,3 @@
 # Tailored
 
-[!screenshot]{design1.PNG}
+[!screenshot](design1.PNG)
