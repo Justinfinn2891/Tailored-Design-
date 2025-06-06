@@ -1,3 +1,4 @@
 # Tailored
 
-[!screenshot](design2.png)
+![screenshot](design1.PNG)
+
