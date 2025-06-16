@@ -1,5 +1,7 @@
 # Tailored
 
+Link to document -> https://docs.google.com/document/d/1VzNrYzCmY5snLvzv3aHSyvICVMXqGaF1V8NeGw2_mC4/edit?usp=sharing
+
 ![screenshot](design1.PNG)
 
 Goals for V.02
