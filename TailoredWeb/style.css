@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  background-color: whitesmoke;
+}
+
+.top-panel {
+  position: static;       /* 🔥 This makes it stay in place */
+  top: 0;                /* 🔥 Sticks to the top of the viewport */
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  z-index: 1000;         /* Makes sure it stays above other content */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  margin-top: 30px;      /* 👈 Add margin so content doesn't hide behind the panel */
+  padding: 20px;
+  margin-bottom: 80px;
+}
+
+.top-panel-buttons {
+  cursor: pointer;
+  font-size: 25px;
+  z-index: 1000;
+  position: sticky;
+  margin-inline: -3px;
+  /*transform: skew(-20deg); */
+  display: inline-block;
+  background-color: aliceblue;
+}
+
+.top-panel-buttons:hover {
+  background-color: #ddd;
+}
+
+.banner-image{
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  margin-top: -35px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.custom-shape {
+  width: 200px;
+  height: 200px;
+  background-color: crimson;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%); /* triangle */
+}
