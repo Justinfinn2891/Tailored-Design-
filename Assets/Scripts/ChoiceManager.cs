@@ -40,15 +40,15 @@ void LoadOBJ(string path)
     GameObject obj = new OBJLoader().Load(path);
     
     Vector3 grid = new Vector3(
-        GridSystem.transform.position.x,
-        1,
-        GridSystem.transform.position.z
+        4,
+        2f,
+        2
     );
     
     obj.transform.position = grid;
 
 
-    float gridScale = 10f; 
+    float gridScale = 12f; 
     ScaleToFit(obj, gridScale);
 
 
