@@ -4,8 +4,8 @@ body {
 }
 
 .top-panel {
-  position: static;       /* 🔥 This makes it stay in place */
-  top: 0;                /* 🔥 Sticks to the top of the viewport */
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
   height: 60px;
@@ -13,43 +13,77 @@ body {
   color: white;
   display: flex;
   align-items: center;
-  justify-content: right;
-  z-index: 1000;         /* Makes sure it stays above other content */
+  justify-content: flex-end;
+  z-index: 1000; /* This defines the stacking level */
+  padding: 0 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.content {
-  margin-top: 30px;      /* 👈 Add margin so content doesn't hide behind the panel */
-  padding: 20px;
-  margin-bottom: 80px;
-}
-
 .top-panel-buttons {
+  position: relative;     /* ⬅️ Add this to enable z-index */
+  z-index: 1001;          /* ⬆️ Above .top-panel */
   cursor: pointer;
-  font-size: 25px;
-  z-index: 1000;
-  position: sticky;
-  margin-inline: -3px;
-  /*transform: skew(-20deg); */
-  display: inline-block;
+  right:1500px;
+  font-size: 20px;
   background-color: aliceblue;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .top-panel-buttons:hover {
   background-color: #ddd;
 }
 
-.banner-image{
+.content {
+  margin-top: 60px; /* Push content below fixed top-panel */
+  padding: 20px;
+  margin-bottom: 80px;
+}
+
+.banner-image {
   width: 100%;
-  height: 700px;
+  height: auto;
+  max-height: 400px;
   object-fit: cover;
-  margin-top: -35px;
+  margin-top: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .custom-shape {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   background-color: crimson;
-  clip-path: polygon(50% 0%, 100% 100%, 0% 100%); /* triangle */
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  margin: 20px auto;
+}
+
+/* 🔻 Responsive Adjustments */
+@media (max-width: 600px) {
+  .top-panel {
+    height: 50px;
+    justify-content: center;
+    padding: 0 5px;
+  }
+
+  .top-panel-buttons {
+    font-size: 16px;
+    padding: 6px 10px;
+    margin-left: 5px;
+  }
+
+  .banner-image {
+    max-height: 250px;
+  }
+
+  .custom-shape {
+    width: 80px;
+    height: 80px;
+  }
+
+  .content {
+    padding: 15px;
+  }
 }
