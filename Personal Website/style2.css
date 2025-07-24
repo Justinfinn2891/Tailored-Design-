@@ -1,0 +1,39 @@
+.mainpanel{
+    background-color:green;
+    border-radius: 0.2em;
+    height:6rem;
+    position:relative;
+}
+
+#information{
+    background-color: grey;
+    border-radius: .1em;
+    width:7rem;
+    height:5rem;
+    position: absolute;
+    left:2rem;
+    top:.5rem;
+}
+
+#text-information{
+    text-align: center;
+    font-size: 1rem;
+}
+
+#food{
+    background-color: red;
+    border-radius: .1em;
+    width:7rem;
+    height:5rem;
+    position: absolute;
+    left:11.8rem;
+    top:.5rem;
+    
+}
+@media screen and (max-width: 768px) {
+
+    .mainpanel{
+
+    }
+
+}
